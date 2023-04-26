@@ -3,34 +3,98 @@
  * https://css-tricks.com/international-box-sizing-awareness-day/
  * Do not modify these two selectors, please
  */
+
+
+
  html {
   box-sizing: border-box;
 }
-
-*,
-*:before,
-*:after {
+*, *:before, *:after {
   box-sizing: inherit;
 }
 
 /*
-* Global layout stuff
-*/
+ * Global layout stuff
+ */
 
 body {
   color: #545149;
   background-color: #f4f1ec;
-  font-family: Source Sans Pro;
   font-size: 24px;
 }
 
 /*
-* Additional CSS can be defined below or in other CSS files, as per instructions
-*/
-main {
+ * Additional CSS can be defined below or in other CSS files, as per instructions
+ */
+
+ body {
+  font-family: 'Source Sans Pro Light 300', 'Source Sans Pro', 'Light 300', sans-serif;
+ }
+
+.container {
+  display: flex;
   width: 90%;
-  margin: 0 auto;
-  align-items: center;
+  justify-content: center;
+  margin: auto;
   background-color: #f4f1ec;
-  font-size: 16;
+  flex-direction: column;
+}
+
+h2 {
+  color: white;
+}
+
+.alertEmptyTweet {
+  display: flex;
+  font-size: 1.17em;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+  margin-top: 0px;
+  border-style: solid;
+  border-color: red;
+  color: red;
+  justify-content: space-evenly;
+}
+
+.alertTooMany {
+  display: flex;
+  font-size: 1.17em;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+  margin-top: 0px;
+  border-style: solid;
+  border-color: red;
+  color: red;
+  justify-content: space-evenly;
+}
+
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  
+}
+
+
+@media only screen and (min-width: 1024px) {
+
+  .container {
+    display: flex;
+    width: 90%;
+    justify-content: center;
+    margin: auto;
+    background-color: #f4f1ec;
+    flex-direction: column;
+  }
+
+  .headerContainer {
+    display: flex;
+    
+  }
+
 }

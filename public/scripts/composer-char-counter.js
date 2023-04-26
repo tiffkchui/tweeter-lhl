@@ -1,20 +1,17 @@
 $(document).ready(function() {
+  $("#tweet-text").on("input", function () {
+    const maxChar = 140;
+    const inputChar = $(this).val().length;
+    const charCounter = maxChar - inputChar;
 
-  // create an event listener
-  $("#tweet-text").on('input', function() {
-    
-    // this is the tweet text
-    let count = $(this)
-    let length = count.val().length;
+    const $counterElement = $(this).parent().find(".counter");
 
-    if(length > 140 ) {
-      $('.counter').css('color', 'red');
+    $counterElement.text(charCounter);
+
+    if (charCounter < 0) {
+      $counterElement.addClass("invalid");
     } else {
-      $('.counter').css('color', 'black');
+      $counterElement.removeClass("invalid");
     }
-
-    $('.counter').val(140 - length);
-
   });
-
 });

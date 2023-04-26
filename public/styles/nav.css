@@ -1,18 +1,40 @@
-nav {
-  position: fixed;
-  padding-left: 1.5em;
-  padding-right: 1.5em;
-  width: 100%;
-  font-family: Source Sans Pro;
-  height: 120px;
-  color: #FFFFFF;
-  background-color: #5641a5;
-  display: flex;
-  justify-content: space-between;
-}
 
-nav span {
+
+nav {
+  height: 120px;
+  background-color: #33034c;
   display: flex;
   align-items: center;
-  font-family: Bungee;
+  justify-content: space-between;
+  width: 100%;
+  position: fixed;
+  top: 0;
 }
+
+span {
+  color: white;
+  font-family: 'Bungee';
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+}
+
+.writeTweetContainer {
+  font-family: 'Source Sans Pro Light 300', 'Source Sans Pro', 'Light 300', sans-serif;
+  justify-content: flex-end;
+  padding-right: 1.5em;
+  align-items: flex-end;
+}
+
+.fas {
+  color: red;
+}
+
+.arrow {
+  text-align: center;
+}
+
+.writeTweet {
+  margin: 0;
+}
+
+
