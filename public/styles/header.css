@@ -1,10 +1,10 @@
 header {
   height: 400px;
-  margin-top: 120px;
+  margin-top: 100px;
   width: 100%;
   text-align: center;
-  background-color: #00238c;
-  background-image: url("https://e0.pxfuel.com/wallpapers/933/254/desktop-wallpaper-dark-solid-purple-deep-purple.jpg");
+  background-color: #68169b;
+  
 }
   
 
@@ -18,8 +18,7 @@ header {
     margin-left: 2%;
     width: 33%;
     text-align: center;
-    background-color: #00238c;
-    background-image: url("https://e0.pxfuel.com/wallpapers/933/254/desktop-wallpaper-dark-solid-purple-deep-purple.jpg");
+    background-color: #68169b;
   }
   
   

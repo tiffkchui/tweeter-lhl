@@ -4,12 +4,6 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
-
 $(document).ready(function() {
 
   // Escape functions to avoid XSS attacks
@@ -44,7 +38,9 @@ $(document).ready(function() {
   };
   
   const renderTweets = function(tweets) {
-
+    // loops through tweets
+    // calls createTweetElement for each tweet
+    // takes return value and appends it to the tweets container
     console.log('TWEETS: ', tweets);
     for (let tweet of tweets) {
       $('.show-tweet').prepend(createTweetElement(tweet));
@@ -75,7 +71,7 @@ $(document).ready(function() {
       setTimeout(clearEmpty, 5000);
     } else {
       const tweetData = form.serialize();
-      console.log('Tweet data ', tweetData)
+      console.log('TWEET DATA ', tweetData)
       $.post('/tweets', tweetData)
       // Clears counter
       $('.counter').val(140);
@@ -96,7 +92,7 @@ $(document).ready(function() {
     $('.alertTooMany').slideUp('slow');
     $.ajax('/tweets', { method: 'GET'})
     .then(function (result){
-      console.log('Result:', result);
+      console.log('RESULT: ', result);
       renderTweets(result);
       $('.loading-spinner').hide()
     });
